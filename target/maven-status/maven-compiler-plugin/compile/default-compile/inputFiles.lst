@@ -1,8 +1,8 @@
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPMethod.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPProtocol.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPResource.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPServer.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPHandler.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPSocket.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPExchange.java
-c:\Users\Mathias\OneDrive - School District No. 36 (Surrey)\GitHub\java-http-server\src\main\java\ca\sozoservers\dev\server\HTTPRequest.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPHandler.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPSocket.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPProtocol.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPServer.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPExchange.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPRequest.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPResource.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPMethod.java

@@ -11,6 +11,7 @@ public class HTTPSocket {
     private PrintStream print;   
     private HTTPRequest request;
     private static final String newLine="\r\n";
+    private String contentType = "text/plain";
     
     public HTTPSocket(Socket socket) throws IOException {
         this.socket = socket;
@@ -52,9 +53,13 @@ public class HTTPSocket {
         print.print(response);
     }
 
+    public void setContentType(String content){
+        this.contentType = content;
+    }
+
     public void sendResponseBody(String response){
         String body = new String();
-        body += "Content-Type: text/plain"+newLine;
+        body += "Content-Type: "+contentType+newLine;
         body += "Date: "+new Date()+newLine+newLine;
         body += response;
         print.print(body);
