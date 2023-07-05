@@ -3,17 +3,22 @@ package ca.sozoservers.dev.server;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 
-public class HTTPServer {
+public class HTTPServer implements ThreadFactory {
 
     private int port, backlog;
     private boolean running = false;
     private ServerSocket socket;
     private HashMap<String, HTTPHandler> resources = new HashMap<>();
+    private Executor executor = Executors.newCachedThreadPool(this);
 
     public HTTPServer(int port, int backlog){
         this.port = port;
         this.backlog = backlog;
+        
     }
 
     private Runnable startHTTP() throws IOException{
@@ -29,12 +34,12 @@ public class HTTPServer {
                         if(!request.isValidRequest()) continue;
 
                         if(resources.containsKey(request.resouce().path())){
-                            resources.get(request.resouce().path()).handle(connection.toHTTPExchange());
+                            executor.execute(()  -> resources.get(request.resouce().path()).handle(connection.toHTTPExchange()));
                         }else{
                             String response = "404, page not found";
-                            connection.sendResponseHeaders(404, response.length());
+                            connection.sendResponseHeaders(HTTPStatus.NOT_FOUND_404, HTTPHeader.ContentLength(response.length()));
                             connection.sendResponseBody(response);
-                            connection.closePrintStream();
+                            connection.closeAllStreams();
                         }
 
                     }catch(IOException ex){
@@ -51,7 +56,9 @@ public class HTTPServer {
 
     public void start() throws IOException{
         running = true;
-        new Thread(startHTTP()).start(); 
+       Thread thread = new Thread(startHTTP());
+       thread.setDaemon(true);
+       thread.start();
     }
 
     public void createResource(String path, HTTPHandler handler){
@@ -60,5 +67,12 @@ public class HTTPServer {
 
     public void stop(){
         running = false;
+    }
+
+    @Override
+    public Thread newThread(Runnable arg0) {
+        Thread thread = new Thread(arg0);
+        thread.setDaemon(true);
+        return thread;
     }
 }

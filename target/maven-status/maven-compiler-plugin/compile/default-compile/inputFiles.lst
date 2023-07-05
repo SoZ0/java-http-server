@@ -1,8 +1,11 @@
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPHandler.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPStatus.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPSocket.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPProtocol.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPServer.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPExchange.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPHeader.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPRequest.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPResource.java
+/home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPResponse.java
 /home/sozo/Documents/GitHub/java-http-server/src/main/java/ca/sozoservers/dev/server/HTTPMethod.java
